@@ -1,0 +1,97 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 5px;
+    gap: 50px;
+}
+
+.title-page {
+    text-align: center;
+}
+
+.valores-dinamicos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.valores-dinamicos div {
+    display: inline-flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn {
+    outline: none;
+    border: 1px solid black;
+    padding: 7.5px 10px;
+    border-radius: 5px;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.btn-red {
+    background-color: red;
+} .btn-green {
+    background-color: lime;
+}
+
+.green {
+    color: green;
+} .red {
+    color: red;
+}
+
+
+.mapeamento-users {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mapeamento-users section {
+    display: inline-flex;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+
+.mapeamento-users section form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.mapeamento-users section form p {
+    font-size: 1.25vw;
+}
+
+
+.consumindo-service {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.consumindo-service p {
+    font-size: 1.25vw;
+}
+
+.testando-props {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.testando-props div {
+    display: inline-flex;
+    align-items: center;
+}
+
+.esterEgg {
+    font-size: 100px;
+}

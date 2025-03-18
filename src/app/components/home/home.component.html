@@ -1,0 +1,57 @@
+<main>
+    <h1 class="title-page">Página home</h1>
+
+    <section class="valores-dinamicos">
+        <h1>Testando valores dinamicos</h1>
+
+        <div>
+            <button [attr.class]="btn_top" class="btn" (click)="btnSubmit()">Butão top</button>
+            <!-- comparação condicional em ambiente de execução -->
+            @if(meuBoolean == true) {
+                <h1>Boolean == <span class="green">True</span></h1>
+            } @else {
+                <h1>Boolean == <span class="red">False</span></h1>
+            }
+        </div>
+    </section>
+
+    <!-- mapeamento usando for each (semelhante ao .map do reactJS) -->
+    <section class="mapeamento-users">
+        <h1>Fazendo mapeamento de resultados (usando objetos)</h1>
+
+        <section>
+            @for(user of usuarios; track user.id) {
+                <form>
+                    <h2>Usuário {{user.id}}</h2>
+            
+                    <p>Nome : {{user.nome}}</p>
+                    <p>Email : {{user.email}}</p>
+                    <p>Idade : {{user.idade}}</p>
+                </form>
+            }
+        </section>
+    </section>
+
+    <section class="consumindo-service">
+        <h1>Pegando informações do usuário logado pelo serviços "user-infos"</h1>
+
+        <div>
+            <p>Id: {{UserLogado.user.id}}</p>
+            <p>Nome: {{UserLogado.user.nome}}</p>
+            <p>Email: {{UserLogado.user.email}}</p>
+            <p>Idade: {{UserLogado.user.idade}}</p>
+        </div>
+    </section>
+
+    <section class="testando-props">
+        <h1>Testando props</h1>
+
+        <div>
+            <app-teste-props stringProps="Testando essa bomba" (emitindoValorTeste)="teste_output($event)"></app-teste-props>
+
+            @if(mostrarEsterEgg == true) {
+                <h1 class="esterEgg">🖕🏼</h1>
+            }
+        </div>
+    </section>
+</main>
